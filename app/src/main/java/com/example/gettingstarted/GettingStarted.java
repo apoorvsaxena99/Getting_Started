@@ -41,7 +41,7 @@ public class GettingStarted extends AppCompatActivity {
 
         if(restorePrefData())
         {
-            Intent mainActivity=new Intent(getApplicationContext(),MainActivity.class);
+            Intent mainActivity=new Intent(getApplicationContext(),Home.class);
             startActivity(mainActivity);
             finish();
         }
@@ -60,9 +60,9 @@ public class GettingStarted extends AppCompatActivity {
 
         //fill list items
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Fresh Food", "We Ship Anywhere in the World. Get a Free Freight Quote Instantly. We Are In The Business Of Keeping Promises", R.drawable.img1));
-        mList.add(new ScreenItem("Fast Delivery", "Fast, Easy & Flexible. Container Quotes Available 24/7. Try Online Quotation Today. Instant Quotes In Less Than 30 Seconds - Without Waiting. Fast & Flexible. Try it now! 24/7 Availability. Fast & Flexible. Real Time Quotes. Transparency On The Rates", R.drawable.img2));
-        mList.add(new ScreenItem("Easy Payments", "In it's purest form, an act of retribution provides symmetry. The rendering payment of crimes against the innocent. But a danger on retaliation lies on the furthering cycle of violence. Still, it's a risk that must be met; and the greater offense is to allow the guilty go unpunished", R.drawable.img3));
+        mList.add(new ScreenItem("Driving Intellects", "E-school mainly pays attention on the welfare of students providing them the best of everything.", R.drawable.e_1));
+        mList.add(new ScreenItem("Placement Assistance", "We inaugurated a new hub and our techno world began. Software developments, free lancing, hiring interns, placement of our trainees. All in one bowl. A huge success for us.", R.drawable.e_2));
+        mList.add(new ScreenItem("Easy Learning", "Be it the training program, be it placement, be it infrastructure, or be it faculty", R.drawable.e_3));
 
 
         //setup viewpager
@@ -114,7 +114,7 @@ public class GettingStarted extends AppCompatActivity {
         getstarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in=new Intent(GettingStarted.this,MainActivity.class);
+                Intent in=new Intent(GettingStarted.this,Home.class);
                 startActivity(in);
                 //also we need to save a boolean value storage so next time when the user run the app
                 //we could know that he is already checked the getting started activity via using sharedprefences
